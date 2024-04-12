@@ -22,3 +22,7 @@ If your linux system time is off, this will break AWS credentials.
 - upload zip to S3: `aws s3 cp s3_event.zip s3://serverless-course-bucket`
 - update the AWS lambda function with the new zip in S3: `aws lambda update-function-code --function-name handleS3PutEvent --s3-bucket serverless-course-bucket --s3-key s3_event.zip --publish`
 
+# Notes on API Gateway
+- check to see if your endpoint is blocked by CORS: https://www.test-cors.org/
+- Add header to prevent CORS exception: `headers: { "Access-Control-Allow-Origin": "*" }`
+- You can validate headers, query string parameters, and body on incoming requests to API Gateway Endpoints! See Method Request page.

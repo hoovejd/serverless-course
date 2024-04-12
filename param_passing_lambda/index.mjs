@@ -20,6 +20,7 @@ export const handler = async (event, context) => {
   // Use destructuring to assign values
   // map event.queryStringParameters.lang to lang
   // map any other fields to info
+  // if null queryStringParameters, then use an empty object
   let { lang, ...info } = event.queryStringParameters || {};
 
   let message = `${greeting[lang] ? greeting[lang] : greeting["en"]} ${name}`;
@@ -35,6 +36,9 @@ export const handler = async (event, context) => {
 
   return {
     statusCode: 200,
+    headers: {
+      "Access-Control-Allow-Origin": "*", // This makes our API endpoint accessible from all domains (prevents CORS exception)
+    },
     body: JSON.stringify(response),
   };
 };
