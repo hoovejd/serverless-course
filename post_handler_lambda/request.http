@@ -1,0 +1,34 @@
+
+### Send POST request to math/add API Gateway endpoint
+### POST https://jigifzwmgl.execute-api.us-east-1.amazonaws.com/test/math/multiply
+### POST https://jigifzwmgl.execute-api.us-east-1.amazonaws.com/test/math/subtract
+POST https://jigifzwmgl.execute-api.us-east-1.amazonaws.com/test/math/add
+Content-Type: application/json
+
+{
+    "num1": 2, 
+    "num2": 6
+}
+
+### Send GET request to /message API Gatewway endpoint
+### you must create an API Key and assign it to your API endpoints in the API Gateway
+GET https://jigifzwmgl.execute-api.us-east-1.amazonaws.com/test/message
+x-api-key: xxxxxxxxxx
+
+### CURL request with X-API-KEY header
+# curl --request GET \
+#   --url https://jigifzwmgl.execute-api.us-east-1.amazonaws.com/test/message \
+#   --header 'user-agent: vscode-restclient' \
+#   --header 'x-api-key: xxxxxxxxx'
+
+
+### Send GET request to /message/{name} API Gatewway endpoint
+@name = Jarrod
+GET https://jigifzwmgl.execute-api.us-east-1.amazonaws.com/test/message/{{name}}
+?lang=en
+
+
+### CURL request with X-API-KEY header
+curl --request GET \
+  --url 'https://jigifzwmgl.execute-api.us-east-1.amazonaws.com/test/message/Jarrod?lang=en' \
+  --header 'user-agent: vscode-restclient'
