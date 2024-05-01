@@ -52,6 +52,7 @@ const deleteCommand = new DeleteCommand({
   }
 });
 
+// I couldn't get this to work...
 const batchGetItemCommand = new BatchGetItemCommand({
   RequestItems: {
     td_notes_sdk: {
@@ -66,6 +67,7 @@ const batchGetItemCommand = new BatchGetItemCommand({
   }
 });
 
+// I couldn't get this to work...
 const batchWriteItemCommand = new BatchWriteItemCommand({
   RequestItems: {
     "td_notes_sdk": [
@@ -93,5 +95,5 @@ const batchWriteItemCommand = new BatchWriteItemCommand({
   }
 });
 
-const response = await docClient.send(batchWriteItemCommand);
+const response = await docClient.send(getCommand);
 console.log(response);
