@@ -8,7 +8,7 @@ Code pertaining to the AWS Lambda &amp; Serverless Architecture Bootcamp course 
 - Enable IAM Identity Center, create user, create permission set (use PowerUserAccess), and assign permission to new user account, follow this video: https://www.youtube.com/watch?v=_KhrGFV_Npw
 - Modify the PowerUserAccess permission set, attach the IAMFullAccess policy to allow role and policy creation
 - Login with IAM Identity Center Access Portal URL using newly created user (enable MFA)
-- Click Access Keys and [follow these instructions]([https://](https://docs.aws.amazon.com/cli/latest/userguide/sso-configure-profile-token.html#sso-configure-profile-token-auto-sso)) to setup the AWS CLI to use AWS IAM Identity Center credentials. 
+- Click Access Keys and [follow these instructions]([https://](https://docs.aws.amazon.com/cli/latest/userguide/sso-configure-profile-token.html#sso-configure-profile-token-auto-sso)) to setup the AWS CLI to use AWS IAM Identity Center credentials. This will have you run 'aws configure sso'. Make sure to set your profile name to 'default'.
 - Run `aws sso login` to refresh your token
 
 ## Troubleshooting
