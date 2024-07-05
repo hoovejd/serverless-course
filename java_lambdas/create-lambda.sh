@@ -8,4 +8,12 @@ aws lambda create-function \
     --runtime java21 \
     --handler hoovjar.lambda.example.JavaLambdaTest1 \
     --role arn:aws:iam::569859221029:role/service-role/lambda_basic_execution_role \
-    --zip-file fileb://./target/java_lambda_test1-1.0.jar
+    --zip-file fileb://./target/java_lambda_test-1.0.jar
+
+
+aws lambda create-function \
+    --function-name java_lambda_test2 \
+    --runtime java21 \
+    --handler hoovjar.lambda.example.JavaLambdaTest2 \
+    --role arn:aws:iam::569859221029:role/service-role/lambda_basic_execution_role \
+    --zip-file fileb://./target/java_lambda_test-1.0.jar

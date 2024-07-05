@@ -5,4 +5,8 @@ mvn clean package
 
 aws lambda update-function-code \
     --function-name java_lambda_test1 \
-    --zip-file fileb://./target/java_lambda_test1-1.0.jar
+    --zip-file fileb://./target/java_lambda_test-1.0.jar
+
+aws lambda update-function-code \
+    --function-name java_lambda_test2 \
+    --zip-file fileb://./target/java_lambda_test-1.0.jar

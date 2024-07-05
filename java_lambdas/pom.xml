@@ -4,7 +4,7 @@
 
   <modelVersion>4.0.0</modelVersion>
   <groupId>hoovjar.lambda.example</groupId>
-  <artifactId>java_lambda_test1</artifactId>
+  <artifactId>java_lambda_test</artifactId>
   <version>1.0</version>
 
   <properties>

@@ -14,7 +14,9 @@ public class JavaLambdaTest1 implements RequestHandler<hoovjar.lambda.example.Ja
     public String handleRequest(IntegerRecord event, Context context) {
         LambdaLogger logger = context.getLogger();
         logger.log("String found: " + event.message);
-        return "The summation of x and y is " + event.x() + event.y();
+        logger.log("x param: " + event.x);
+        logger.log("y param: " + event.y);
+        return "The summation of x and y is " + event.x + event.y;
     }
 
 }
