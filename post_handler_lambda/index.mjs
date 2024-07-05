@@ -23,6 +23,9 @@ export const handler = async (event, context) => {
 
   return {
     statusCode: 200,
-    body: JSON.stringify(result),
+    headers: {
+      "Access-Control-Allow-Origin": "*" // This makes our API endpoint accessible from all domains (prevents CORS exception)
+    },
+    body: JSON.stringify(result)
   };
 };
