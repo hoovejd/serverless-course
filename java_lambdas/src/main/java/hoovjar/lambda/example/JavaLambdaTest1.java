@@ -4,6 +4,8 @@ import com.amazonaws.services.lambda.runtime.Context;
 import com.amazonaws.services.lambda.runtime.LambdaLogger;
 import com.amazonaws.services.lambda.runtime.RequestHandler;
 
+// Simple lambda test function that takes an IntegerRecord object as input and returns the sum as a string.
+
 public class JavaLambdaTest1 implements RequestHandler<hoovjar.lambda.example.JavaLambdaTest1.IntegerRecord, String> {
 
     // Define the IntegerRecord object

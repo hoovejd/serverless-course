@@ -3,6 +3,8 @@
 # package will use the shaded plugin to create "fat" jar that includes all necessary dependencies
 mvn clean package
 
+# Note: You only need to call lambda create-function once per function 😁
+
 aws lambda create-function \
     --function-name java_lambda_test1 \
     --runtime java21 \
