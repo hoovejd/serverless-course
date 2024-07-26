@@ -1,0 +1,35 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  A collection of Java lambdas used for testing purposes. Deployed using a SAM template.
+
+Globals:
+  Function:
+    Timeout: 3
+    MemorySize: 512
+    Runtime: java21
+    Architectures:
+      - x86_64
+
+Resources:
+  JavaLambdaTest1:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: hoovjar.lambda.example.JavaLambdaTest1
+  JavaLambdaTest2:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: hoovjar.lambda.example.JavaLambdaTest2
+  JavaLambdaTest3:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: hoovjar.lambda.example.JavaLambdaTest3
+
+
+Outputs:
+  JavaLambdaTest1:
+    Value: !GetAtt JavaLambdaTest1.Arn
+  JavaLambdaTest2:
+    Value: !GetAtt JavaLambdaTest2.Arn
+  JavaLambdaTest3:
+    Value: !GetAtt JavaLambdaTest3.Arn
