@@ -8,3 +8,13 @@ Useful links:
 - https://docs.aws.amazon.com/lambda/latest/dg/java-handler.html
 - https://docs.aws.amazon.com/lambda/latest/dg/lambda-java.html
 - https://docs.aws.amazon.com/sdk-for-java/latest/developer-guide/java_lambda_code_examples.html
+
+
+# Deploy using SAM
+[SAM Hello World Tutorial](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-getting-started-hello-world.html)
+
+- Build with `sam build`
+- Deploy with `sam deploy --guided` 
+- Deploy using samconfig.toml presets: `sam deploy`
+- Once deployed, invoke a lambda with: `same remote invoke LAMBDAFUNCTIONNAME`
+- Clean up (remove cloudformation stack and S3 artifacts): `sam delete`
