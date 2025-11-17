@@ -1,3 +1,9 @@
+# Prerequisites
+1. Java 25
+2. Maven
+3. Docker
+4. AWS CLI v2
+
 # Docker image for ecstesting
 
 Quick steps to build the jar and Docker image for this Spring Boot application.

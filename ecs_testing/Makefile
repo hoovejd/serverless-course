@@ -11,10 +11,16 @@ clean:
 	mvn clean
 
 docker-build:
-	docker build -t ecs-testing:latest .
+	docker build -t hoovjar/ecs-testing .
 
 docker-run:
 	docker run ecs-testing:latest
+
+docker-tag:
+	docker tag hoovjar/ecs-testing:latest 569859221029.dkr.ecr.us-east-1.amazonaws.com/hoovjar/ecs-testing:latest
+
+docker-push:
+	docker push 569859221029.dkr.ecr.us-east-1.amazonaws.com/hoovjar/ecs-testing:latest
 
 help:
 	@echo "Usage: make [target]"
