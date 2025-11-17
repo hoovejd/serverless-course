@@ -10,6 +10,12 @@ test:
 clean:
 	mvn clean
 
+docker-build:
+	docker build -t ecs-testing:latest .
+
+docker-run:
+	docker run ecs-testing:latest
+
 help:
 	@echo "Usage: make [target]"
 	@echo "Targets:"

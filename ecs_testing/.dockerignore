@@ -1,0 +1,9 @@
+target/*
+!target/*.jar
+
+.mvn
+.git
+.gitignore
+*.md
+Dockerfile
+Makefile
